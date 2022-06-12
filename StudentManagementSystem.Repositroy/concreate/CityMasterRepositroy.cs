@@ -20,7 +20,8 @@ namespace StudentManagementSystem.Repositroy.concreate
 
         public CityMasterRepositroy(IConfiguration config)
         {
-            string constr = _config.getco;
+            _config = config;
+            string constr = _config.GetConnectionString("studentConnection");
             con = new SqlConnection(constr);
         }
 
